@@ -1,0 +1,12 @@
+{
+  "install": "javac server/Server.java",
+  "start": "java server.Server",
+  "watch": {
+    "install": {
+      "include": [".*\.java$"]
+    },
+    "restart": {
+      "include": [".*\\.java$"]
+    }
+  }
+}
