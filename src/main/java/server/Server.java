@@ -36,7 +36,7 @@ public class Server {
             t.sendResponseHeaders(200, response.length());
             OutputStream os = t.getResponseBody();
             os.write(response.getBytes());
-            this.writeDocument("Data", java.time.LocalDateTime.now());
+            MyHandler.writeDocument("Data", java.time.LocalDateTime.now());
             os.close();
         }
 
