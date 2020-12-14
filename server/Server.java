@@ -1,4 +1,4 @@
-package com.example;
+package server;
 
 import java.io.IOException;
 import java.io.OutputStream;
@@ -8,8 +8,7 @@ import com.sun.net.httpserver.HttpExchange;
 import com.sun.net.httpserver.HttpHandler;
 import com.sun.net.httpserver.HttpServer;
 
-// My main server
-public class Main {
+public class Server {
 
     public static void main(String[] args) throws Exception {
         int port = 8000;
