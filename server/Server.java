@@ -11,8 +11,10 @@ import com.sun.net.httpserver.HttpServer;
 public class Server {
 
     public static void main(String[] args) throws Exception {
-        HttpServer server = HttpServer.create(new InetSocketAddress(8000), 0);
-        server.createContext("/test", new MyHandler());
+        int port = 8000;
+        HttpServer server = HttpServer.create(new InetSocketAddress(port), 0);
+        System.out.println("Server is running in port: " + port);
+        server.createContext("/", new MyHandler());
         server.setExecutor(null); // creates a default executor
         server.start();
     }
