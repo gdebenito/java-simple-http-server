@@ -36,7 +36,7 @@ public class Server {
             t.sendResponseHeaders(200, response.length());
             OutputStream os = t.getResponseBody();
             os.write(response.getBytes());
-            MyHandler.writeDocument("Data", java.time.LocalDateTime.now());
+            MyHandler.writeDocument("Data", java.time.LocalDateTime.now().toString());
             os.close();
         }
 
@@ -44,7 +44,7 @@ public class Server {
          * Use Streams when you are dealing with raw data
          * @param data
          */
-        private void writeUsingOutputStream(String data, String name) {
+        private static void writeDocument(String data, String name) {
             OutputStream os = null;
             try {
                 os = new FileOutputStream(new File("./" + name));
