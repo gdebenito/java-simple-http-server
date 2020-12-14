@@ -1,1 +1,1 @@
-web: java server/Server.java
+web: java src/main/java/com/example/Main.java
